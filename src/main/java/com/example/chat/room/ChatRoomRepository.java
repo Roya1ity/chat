@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ChatRoomRepository extends JpaRepository<ChatRoom,Long> {
 
-    boolean existByName(String name);
+    boolean existsByName(String name);
 
     Page<ChatRoom> findAllByOrderByCreatedAtDesc(Pageable pageable);
 }

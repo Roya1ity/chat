@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
@@ -34,7 +33,7 @@ public class RoomMember extends BaseTimeEntity {
     @Column(name = "joined_at",nullable = false,updatable = false)
     private LocalDateTime joinedAt;
 
-    public RoomMember(ChatRoom room,Long userId,String username) {
+    public RoomMember(ChatRoom room, Long userId, String username) {
         this.room = room;
         this.userId = userId;
         this.username = username;

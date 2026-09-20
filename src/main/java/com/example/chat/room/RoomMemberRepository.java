@@ -8,7 +8,7 @@ import java.util.List;
 @Repository
 public interface RoomMemberRepository extends JpaRepository<RoomMember,Long> {
 
-    boolean existByRoomIdAndUserId(Long roomId,Long userId);
+    boolean existsByRoomIdAndUserId(Long roomId,Long userId);
 
     long countByRoomId(Long roomId);
 
